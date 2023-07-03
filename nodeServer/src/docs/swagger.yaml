@@ -1,0 +1,863 @@
+openapi: 3.0.0
+info:
+  version: 1.0.0
+  title: Gamer Manager API
+  description: API for Gamers to stay up-to-date in eSport events, streams and news
+servers:
+  - url: https://localhost:3000
+tags:
+  - name: user
+    description: Operations about users
+  - name: event
+    description: Operations about eSport events
+  - name: article
+    description: Operations about articles
+  - name: stream
+    description: Operations about stream events created by "streamer" role users
+paths:
+  /users/:
+    post:
+      tags:
+        - user
+      summary: Add a new user / register new user
+      description: Register / add new user to db
+      requestBody:
+        description: Create a new user in the db
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/User"
+        required: true
+      responses:
+        "201":
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/User"
+        "500":
+          description: Internal Server Error
+          content:
+            applicationjson:
+              schema:
+                $ref: "#/components/schemas/Error"
+    get:
+      tags:
+        - user
+      summary: Get all users
+      description: Get all the users from the database
+      responses:
+        "200":
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/User"
+        "404":
+          description: Not found
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+
+  /users/{_id}:
+    get:
+      tags:
+        - user
+      summary: Find user by ID
+      description: Returns a single user
+      parameters:
+        - in: path
+          name: _id
+          example: "643e4a78031dfccb66ace70a"
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: return a user
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/User"
+        "400":
+          description: Invalid ID supplied
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+        "404":
+          description: User not found
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+    put:
+      tags:
+        - user
+      description: Updates a user in the database
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: _id
+          in: path
+          description: ID of user that needs to be updated
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/User"
+      responses:
+        "200":
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/User"
+        "404":
+          description: Not found
+          content:
+            applicationjson:
+              schema:
+                $ref: "#/components/schemas/Error"
+        "500":
+          description: Internal Server Error
+          content:
+            applicationjson:
+              schema:
+                $ref: "#/components/schemas/Error"
+    delete:
+      tags:
+        - user
+      summary: Deletes a user
+      description: delete a user from database
+      parameters:
+        - name: _id
+          in: path
+          description: user ID to delete
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: User has been successfully deleted
+          content:
+            application/json:
+              schema:
+                type: object
+                example: { id: _id }
+        "400":
+          description: Invalid user ID
+          content:
+            applicationjson:
+              schema:
+                $ref: "#/components/schemas/Error"
+        "500":
+          description: Internal Server Error
+          content:
+            applicationjson:
+              schema:
+                $ref: "#/components/schemas/Error"
+
+  /events/:
+    post:
+      tags:
+        - event
+      summary: Create a new event
+      description: Add new event to database
+      security:
+        - bearerAuth: []
+      requestBody:
+        description: Create a new event in the database
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Event"
+        required: true
+      responses:
+        "201":
+          description: Event succesfully created
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Event"
+        "500":
+          description: Internal Server Error
+          content:
+            applicationjson:
+              schema:
+                $ref: "#/components/schemas/Error"
+    get:
+      tags:
+        - event
+      summary: Get all events
+      description: Get all the events from the database
+      responses:
+        "200":
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Event"
+        "404":
+          description: Not found
+          content:
+            applicationjson:
+              schema:
+                $ref: "#/components/schemas/Error"
+
+  /events/{_id}:
+    get:
+      tags:
+        - event
+      summary: Find an event by ID
+      description: Returns a single event
+      parameters:
+        - in: path
+          name: _id
+          example: "643e4a78031dfccb66ace70a"
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: return an event
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Event"
+        "400":
+          description: Invalid ID supplied
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+        "404":
+          description: Event not found
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+    put:
+      tags:
+        - event
+      description: Updates an event in the database
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: _id
+          in: path
+          description: ID of the event that needs to be updated
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Event"
+      responses:
+        "200":
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Event"
+        "404":
+          description: Not found
+          content:
+            applicationjson:
+              schema:
+                $ref: "#/components/schemas/Error"
+        "500":
+          description: Internal Server Error
+          content:
+            applicationjson:
+              schema:
+                $ref: "#/components/schemas/Error"
+    delete:
+      tags:
+        - event
+      summary: Deletes an event
+      description: delete an event from database
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: _id
+          in: path
+          description: event ID to delete
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Event has been successfully deleted
+          content:
+            application/json:
+              schema:
+                type: object
+                example: { id: _id }
+        "400":
+          description: Invalid user ID
+          content:
+            applicationjson:
+              schema:
+                $ref: "#/components/schemas/Error"
+        "500":
+          description: Internal Server Error
+          content:
+            applicationjson:
+              schema:
+                $ref: "#/components/schemas/Error"
+
+  /articles/:
+    post:
+      tags:
+        - article
+      summary: Create a new article
+      description: Add new article to database
+      security:
+        - bearerAuth: []
+      requestBody:
+        description: Create a new article in the database
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Article"
+        required: true
+      responses:
+        "201":
+          description: Article succesfully created
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Article"
+        "500":
+          description: Internal Server Error
+          content:
+            applicationjson:
+              schema:
+                $ref: "#/components/schemas/Error"
+    get:
+      tags:
+        - article
+      summary: Get all articles
+      description: Get all the articles from the database
+      responses:
+        "200":
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Article"
+        "404":
+          description: Not found
+          content:
+            applicationjson:
+              schema:
+                $ref: "#/components/schemas/Error"
+
+  /articles/{_id}:
+    get:
+      tags:
+        - article
+      summary: Find an article by ID
+      description: Returns a single article
+      parameters:
+        - in: path
+          name: _id
+          example: "643e4a78031dfccb66ace70a"
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: return an article
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Article"
+        "400":
+          description: Invalid ID supplied
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+        "404":
+          description: Article not found
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+    put:
+      tags:
+        - article
+      description: Updates an article in the database
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: _id
+          in: path
+          description: ID of the article that needs to be updated
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Article"
+      responses:
+        "200":
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Article"
+        "404":
+          description: Not found
+          content:
+            applicationjson:
+              schema:
+                $ref: "#/components/schemas/Error"
+        "500":
+          description: Internal Server Error
+          content:
+            applicationjson:
+              schema:
+                $ref: "#/components/schemas/Error"
+    delete:
+      tags:
+        - article
+      summary: Deletes an article
+      description: delete an article from database
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: _id
+          in: path
+          description: article ID to delete
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Article has been successfully deleted
+          content:
+            application/json:
+              schema:
+                type: object
+                example: { id: _id }
+        "400":
+          description: Invalid user ID
+          content:
+            applicationjson:
+              schema:
+                $ref: "#/components/schemas/Error"
+        "500":
+          description: Internal Server Error
+          content:
+            applicationjson:
+              schema:
+                $ref: "#/components/schemas/Error"
+
+  /streams/:
+    post:
+      tags:
+        - stream
+      summary: Create a new stream
+      description: Add new stream to database
+      security:
+        - bearerAuth: []
+      requestBody:
+        description: Create a new stream in the database
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Stream"
+        required: true
+      responses:
+        "201":
+          description: Stream succesfully created
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Stream"
+        "500":
+          description: Internal Server Error
+          content:
+            applicationjson:
+              schema:
+                $ref: "#/components/schemas/Error"
+    get:
+      tags:
+        - stream
+      summary: Get all streams
+      description: Get all the streams from the database
+      responses:
+        "200":
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Stream"
+        "404":
+          description: Not found
+          content:
+            applicationjson:
+              schema:
+                $ref: "#/components/schemas/Error"
+
+  /streams/{_id}:
+    get:
+      tags:
+        - stream
+      summary: Find a stream by ID
+      description: Returns a single stream
+      parameters:
+        - in: path
+          name: _id
+          example: "643e4a78031dfccb66ace70a"
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: return a stream
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Stream"
+        "400":
+          description: Invalid ID supplied
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+        "404":
+          description: Stream not found
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+    put:
+      tags:
+        - stream
+      description: Updates a stream in the database
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: _id
+          in: path
+          description: ID of the stream that needs to be updated
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Stream"
+      responses:
+        "200":
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Stream"
+        "404":
+          description: Not found
+          content:
+            applicationjson:
+              schema:
+                $ref: "#/components/schemas/Error"
+        "500":
+          description: Internal Server Error
+          content:
+            applicationjson:
+              schema:
+                $ref: "#/components/schemas/Error"
+    delete:
+      tags:
+        - stream
+      summary: Deletes a stream
+      description: delete a stream from database
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: _id
+          in: path
+          description: stream ID to delete
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Stream has been successfully deleted
+          content:
+            application/json:
+              schema:
+                type: object
+                example: { id: _id }
+        "400":
+          description: Invalid user ID
+          content:
+            applicationjson:
+              schema:
+                $ref: "#/components/schemas/Error"
+        "500":
+          description: Internal Server Error
+          content:
+            applicationjson:
+              schema:
+                $ref: "#/components/schemas/Error"
+
+  /login:
+    post:
+      description: Creates a new access_token and logs in
+      parameters:
+        - name: email
+          in: query
+          description: The user email for login
+          required: true
+          schema:
+            type: string
+        - name: password
+          in: query
+          description: The password for login in clear text
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              example: { email: "user@mail.com", password: "userpw" }
+      responses:
+        "200":
+          description: successful login
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Login"
+        "400":
+          description: Invalid username/password supplied
+        "500":
+          description: Internal Server Error
+          content:
+            applicationjson:
+              schema:
+                $ref: "#/components/schemas/Error"
+
+  /user/logout:
+    get:
+      tags:
+        - user
+      summary: Logs out current logged in user session
+      description: ""
+      operationId: logoutUser
+      parameters: []
+      responses:
+        default:
+          description: successful operation
+
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+
+  schemas:
+    User:
+      type: object
+      required:
+        - firstName
+        - lastName
+        - nickName
+        - email
+        - password
+        - role
+      properties:
+        _id:
+          type: string
+          format: ObjectId
+          example: "643e4a78031dfccb66ace70a"
+        nickName:
+          type: string
+          example: theUser
+        firstName:
+          type: string
+          example: John
+        lastName:
+          type: string
+          example: Doe
+        email:
+          type: string
+          example: john@email.com
+        password:
+          type: string
+          example: "aabb12345"
+        role:
+          type: string
+          example: "user"
+        mainGame:
+          type: string
+          example: "PUBG"
+        streamSite:
+          type: string
+          example: "www.safdasf.com/username"
+        profilePic:
+          type: string
+          example: "http://image.com.jpg"
+        streams:
+          type: object
+          example: "#/components/schemas/Stream"
+
+    Event:
+      type: object
+      required:
+        - title
+        - game
+        - startDate
+      properties:
+        _id:
+          type: string
+          format: ObjectId
+          example: "643e4a78031dfccb66ace70a"
+        title:
+          type: string
+          example: "This is a title"
+        description:
+          type: string
+          example: "This is a description"
+        game:
+          type: string
+          example: "PUBG"
+        type:
+          type: string
+          example: "ONLINE"
+        startDate:
+          type: string
+          example: "2023/05/30"
+        eventPage:
+          type: string
+          example: "www.eventpage.com"
+
+    Article:
+      type: object
+      required:
+        - title
+        - category
+        - short
+        - article1
+        - postImg
+        - mainImg
+        - lead
+      properties:
+        _id:
+          type: string
+          format: ObjectId
+          example: "643e4a78031dfccb66ace70a"
+        title:
+          type: string
+          example: "This is a title"
+        category:
+          type: string
+          example: "PUBG"
+        short:
+          type: string
+          example: "This is a short description"
+        article1:
+          type: string
+          example: "This is a paragraph."
+        article2:
+          type: string
+          example: "This is a paragraph."
+        article3:
+          type: string
+          example: "This is a paragraph."
+        postImg:
+          type: string
+          example: "http://image.com.jpg"
+        mainImg:
+          type: string
+          example: "http://image.com.jpg"
+        lead:
+          type: boolean
+        postDate:
+          type: string
+          example: "2023/05/30"
+
+    Stream:
+      type: object
+      required:
+        - title
+        - game
+        - startDate
+      properties:
+        _id:
+          type: string
+          format: ObjectId
+          example: "643e4a78031dfccb66ace70a"
+        title:
+          type: string
+          example: "This is a title"
+        game:
+          type: string
+          example: "PUBG"
+        startDate:
+          type: string
+          example: "2023/05/30"
+        streamLink:
+          type: string
+          example: "www.streamerlink.com"
+        creator:
+          type: object
+          example: "#/components/schemas/User"
+
+    Login:
+      type: object
+      properties:
+        success:
+          type: boolean
+        accessToken:
+          type: string
+        user:
+          type: object
+          example: "#/components/schemas/User"
+
+    Error:
+      type: object
+      required:
+        - message
+        - has_error
+      properties:
+        message:
+          type: string
+        has_error:
+          type: boolean

@@ -1,0 +1,122 @@
+[
+  {
+    "title": "PUBG Global Series 2023 Phase 1",
+    "description": "The PUBG Global Series 2023 Phase 1 is the first major championship of the 2023 Competitive Season organized by PUBG Corporation. Invited are the best 24 teams throughout the Phase 1 leagues.",
+    "game": "PUBG",
+    "type": "ONLINE",
+    "startDate": "2023/04/27",
+    "eventPage": "https://liquipedia.net/pubg/PUBG_Global_Series/2023/1"
+  },
+  {
+    "title": "VALORANT Champions Tour 2023: Masters Tokyo",
+    "description": "VALORANT Champions Tour 2023 is the third official tournament circuit by Riot Games.",
+    "game": "VALORANT",
+    "type": "LAN",
+    "startDate": "2023/06/11",
+    "eventPage": "https://liquipedia.net/valorant/VCT/2023/Masters"
+  },
+  {
+    "title": "VALORANT Champions 2023",
+    "description": "VALORANT Champions Tour 2023 is the third official tournament circuit by Riot Games.",
+    "game": "VALORANT",
+    "type": "LAN",
+    "startDate": "2023/08/06",
+    "eventPage": "https://liquipedia.net/valorant/VCT/2023/Champions"
+  },
+  {
+    "title": "VALORANT Champions Tour 2023: Pacific League",
+    "description": "VALORANT Champions Tour 2023 is the third official tournament circuit by Riot Games. Top 3 teams will advance to Masters and Champions.",
+    "game": "VALORANT",
+    "type": "LAN",
+    "startDate": "2023/03/25",
+    "eventPage": "https://liquipedia.net/valorant/VCT/2023/Pacific_League"
+  },
+  {
+    "title": "VALORANT Champions Tour 2023: EMEA League",
+    "description": "VALORANT Champions Tour 2023 is the third official tournament circuit by Riot Games. Top 3 teams will advance to Masters and Champions.",
+    "game": "VALORANT",
+    "type": "LAN",
+    "startDate": "2023/03/27",
+    "eventPage": "https://liquipedia.net/valorant/VCT/2023/EMEA_League"
+  },
+  {
+    "title": "VALORANT Champions Tour 2023: Americas League",
+    "description": "VALORANT Champions Tour 2023 is the third official tournament circuit by Riot Games. Top 3 teams will advance to Masters and Champions.",
+    "game": "VALORANT",
+    "type": "LAN",
+    "startDate": "2023/04/01",
+    "eventPage": "https://liquipedia.net/valorant/VCT/2023/Americas_League"
+  },
+  {
+    "title": "PUBG Champions League - Summer 2023 Preseason",
+    "description": "PUBG Champions League: Preseason is a PUBG professional league in China. The league represents China's portion of 2023 Official competitive season held by PUBG Corporation.",
+    "game": "PUBG",
+    "type": "ONLINE",
+    "startDate": "2023/05/18",
+    "eventPage": "https://liquipedia.net/pubg/PUBG_Champions_League/2023/Summer/Preseason"
+  },
+  {
+    "title": "PUBG Asia Super Cup 2023 Summer",
+    "description": "The PUBG Asia Super Cup is an online regional tournament structure organized by PUBG Corporation. The event is an off-season replacement for the PUBG Continental Series with no implication towards the year's Global Championship cycle",
+    "game": "PUBG",
+    "type": "ONLINE",
+    "startDate": "2023/05/05",
+    "eventPage": "https://liquipedia.net/pubg/PUBG_Asia_Super_Cup/2023/Summer"
+  },
+  {
+    "title": "Intel Extreme Masters Rio 2023",
+    "description": "The Intel Extreme Masters returns to Rio de Janeiro with its signature ESL Pro Tour Masters event. Immerse yourself in the ultimate CS:GO spectacle, showcasing 16 elite teams, a $250,000 prize pool and an Intel® Grand Slam contribution to the champions.",
+    "game": "CS:GO",
+    "type": "LAN",
+    "startDate": "2023/04/17",
+    "eventPage": "https://pro.eslgaming.com/tour/csgo/rio/"
+  },
+  {
+    "title": "BLAST.tv Paris Major 2023",
+    "description": "The BLAST.tv Paris Major 2023, will be the nineteenth and final Counter-Strike: Global Offensive Major Championship. It will be held in Paris, France. Twenty-four teams will qualify via regional major rankings and features a US$1,250,000 prize pool. It will be the first Major Championship tournament hosted by Blast.",
+    "game": "CS:GO",
+    "type": "LAN",
+    "startDate": "2023/05/08",
+    "eventPage": "https://liquipedia.net/counterstrike/BLAST/Major/2023/Paris"
+  },
+  {
+    "title": "Intel Extreme Masters Dallas 2023",
+    "description": "IEM Dallas returns, once again as part of the DreamHack experience! The home of NACS, fans will be filling out the massive arena to see if hometown heroes can once again be victorious! The best teams in the world fight it out in the Kay Bailey Hutchison Convention Center to be crowned champion.",
+    "game": "CS:GO",
+    "type": "LAN",
+    "startDate": "2023/05/29",
+    "eventPage": "https://pro.eslgaming.com/tour/csgo/dallas/"
+  },
+  {
+    "title": "Intel Extreme Masters Cologne 2023",
+    "description": "It's this time of the year again when players and fans across the globe are getting ready to attend Europe's biggest CS:GO esports happening at IEM Cologne, The Cathedral of Counter-Strike. For 24 teams, there is once again a whole lot at stake. $1M prize money and another win in the Intel Grand Slam, but above all, one of the most prestigious titles around: The EPT Championship.",
+    "game": "CS:GO",
+    "type": "LAN",
+    "startDate": "2023/07/25",
+    "eventPage": "https://pro.eslgaming.com/tour/csgo/cologne/"
+  },
+  {
+    "title": "2023 World Championship",
+    "description": "The 2023 World Championship is the crowning event of League of Legends esports for the year. The tournament welcomes 22 teams from all regions of the game in a months-long race for the Summoner's Cup.",
+    "game": "LOL",
+    "type": "LAN",
+    "startDate": "2023/09/01",
+    "eventPage": "https://lolesports.com/article/state-of-the-game-lol-esports-in-2023/blt5d3bca31d1b39e0c"
+  },
+  {
+    "title": "LEC Finals 2023",
+    "description": "League of Legends EMEA Championship Finals 2023 is the 1st LEC Finals, 6 European teams compete for the LEC 2023 Champions title.",
+    "game": "LOL",
+    "type": "LAN",
+    "startDate": "2023/08/04",
+    "eventPage": "https://liquipedia.net/leagueoflegends/LEC/2023/Finals"
+  },
+  {
+    "title": "Mid-Season Invitational 2023",
+    "description": "The Mid-Season Invitational (also abbreviated as MSI) features the winners from 9 individual Riot leagues spring splits and 4 runner ups from LCK, LPL, LEC, LCS.",
+    "game": "LOL",
+    "type": "LAN",
+    "startDate": "2023/05/02",
+    "eventPage": "https://liquipedia.net/leagueoflegends/Mid-Season_Invitational/2023"
+  }
+]

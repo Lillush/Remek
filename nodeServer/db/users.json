@@ -1,0 +1,267 @@
+[
+  {
+    "firstName": "Kristien",
+    "lastName": "Clampett",
+    "nickName": "kclampett0",
+    "email": "kclampett0@smh.com.au",
+    "password": "$2a$10$1v3.4B/EbefetBqpqrEDn.5A9P.5EmCjZ7dVcCuotF3Wy4WyrrhZ6",
+    "isStreamer": true,
+    "role": "streamer",
+    "mainGame": "VALORANT",
+    "streamSite": "www.twitch.tv/kclampett0",
+    "profilePic": "http://dummyimage.com/174x100.png/ff4444/ffffff",
+    "streams": [{}, {}, {}, {}, {}]
+  },
+  {
+    "firstName": "Jakie",
+    "lastName": "Heers",
+    "nickName": "jheers1",
+    "email": "jheers1@webs.com",
+    "password": "$2a$10$gwK1a6HlWMNCCU8mSDxwNOv/R7.EiQb7Har6f6sdqjh2Myd049Yzq",
+    "isStreamer": false,
+    "role": "user"
+  },
+  {
+    "firstName": "Marsiella",
+    "lastName": "Larchier",
+    "nickName": "mlarchier2",
+    "email": "mlarchier2@altervista.org",
+    "password": "$2a$10$6CAz215bxJBCnNDbA5Fy6uFHPEDHwnWeuhOSAJjeOJy8TX0Dpp0.G",
+    "isStreamer": true,
+    "role": "streamer",
+    "mainGame": "LOL",
+    "streamSite": "www.twitch.tv/mlarchier2",
+    "profilePic": "http://dummyimage.com/174x100.png/ff4444/ffffff",
+    "streams": [{}, {}, {}, {}]
+  },
+  {
+    "firstName": "Oona",
+    "lastName": "Maus",
+    "nickName": "omaus3",
+    "email": "omaus3@google.com",
+    "password": "$2a$10$QnGMEjTSfAnUbo0f7NJeM.csB0j4.B1IJkdR43eNVAbP/uXgUEx0e",
+    "isStreamer": false,
+    "role": "user"
+  },
+  {
+    "firstName": "Dacey",
+    "lastName": "Hedylstone",
+    "nickName": "dhedylstone4",
+    "email": "dhedylstone4@elpais.com",
+    "password": "$2a$10$Xu7mS53hQwxNjD7dfbgo5.Gdha8LKuDZ0m9.Q8oxyWv25HO95vuVS",
+    "isStreamer": true,
+    "role": "streamer",
+    "mainGame": "LOL",
+    "streamSite": "www.twitch.tv/dhedylstone4",
+    "profilePic": "http://dummyimage.com/174x100.png/ff4444/ffffff",
+    "streams": [{}, {}, {}, {}]
+  },
+  {
+    "firstName": "Theodora",
+    "lastName": "Paradyce",
+    "nickName": "tparadyce5",
+    "email": "tparadyce5@godaddy.com",
+    "password": "$2a$10$wo19buLy7T1tjnA7I7/d9ujAeVBrmFbOdZeIo70.GHZTdKpa8WgaG",
+    "isStreamer": true,
+    "role": "streamer",
+    "mainGame": "PUBG",
+    "streamSite": "www.twitch.tv/tparadyce5",
+    "profilePic": "http://dummyimage.com/174x100.png/ff4444/ffffff",
+    "streams": [{}, {}, {}, {}, {}]
+  },
+  {
+    "firstName": "Hazel",
+    "lastName": "Guise",
+    "nickName": "hguise6",
+    "email": "hguise6@omniture.com",
+    "password": "$2a$10$1088ONVMTp9xGPBIEclXAePAAby0tPpIRnpcYfHk/HVM/TMlTOkYW",
+    "isStreamer": true,
+    "role": "streamer",
+    "mainGame": "CS:GO",
+    "streamSite": "www.twitch.tv/hguise6",
+    "profilePic": "http://dummyimage.com/215x100.png/cc0000/ffffff",
+    "streams": [{}, {}, {}, {}, {}]
+  },
+  {
+    "firstName": "Padget",
+    "lastName": "Yanin",
+    "nickName": "pyanin7",
+    "email": "pyanin7@alibaba.com",
+    "password": "$2a$10$2t1EIdSJIvu04HxmoTx/nOvsdtTBJIyXxMkeQDcQP2ZxusS7xZywq",
+    "isStreamer": false,
+    "role": "user"
+  },
+  {
+    "firstName": "Bailie",
+    "lastName": "Wrightson",
+    "nickName": "bwrightson8",
+    "email": "bwrightson8@blogger.com",
+    "password": "$2a$10$g2IYz.yTYfY9j.4ARZiYLeVW.t2nyP5L999PZCX4SEFGap0W9g/ly",
+    "isStreamer": true,
+    "role": "streamer",
+    "mainGame": "EFT",
+    "streamSite": "www.twitch.tv/bwrightson8",
+    "profilePic": "http://dummyimage.com/163x100.png/5fa2dd/ffffff",
+    "streams": [{}, {}, {}, {}, {}]
+  },
+  {
+    "firstName": "Morse",
+    "lastName": "Audibert",
+    "nickName": "maudibert9",
+    "email": "maudibert9@va.gov",
+    "password": "$2a$10$nxIqoR2gr70tSkHJmlBrLurl7nhUvdIhdsGlJFLO2lGVmVYGDrvi.",
+    "isStreamer": false,
+    "role": "user"
+  },
+  {
+    "firstName": "Alec",
+    "lastName": "Halls",
+    "nickName": "ahallsa",
+    "email": "ahallsa@csmonitor.com",
+    "password": "$2a$10$fespKce3bM/r4sDzH5LMOOpr8MU4lY9YKmeVWzMgjpVAkwPGRdo5i",
+    "isStreamer": true,
+    "role": "streamer",
+    "mainGame": "CS:GO",
+    "streamSite": "www.twitch.tv/ahallsa",
+    "profilePic": "http://dummyimage.com/174x100.png/ff4444/ffffff",
+    "streams": [{}, {}, {}, {}]
+  },
+  {
+    "firstName": "Edith",
+    "lastName": "Lawler",
+    "nickName": "elawlerb",
+    "email": "elawlerb@geocities.com",
+    "password": "$2a$10$mUptW9T5PrsBKiQzcKJr9eAuQFHP7Rv2NDiUJlILZkkS/ILHWR2VO",
+    "isStreamer": true,
+    "role": "streamer",
+    "mainGame": "PUBG",
+    "streamSite": "www.twitch.tv/elawlerb",
+    "profilePic": "http://dummyimage.com/108x100.png/cc0000/ffffff",
+    "streams": [{}, {}]
+  },
+  {
+    "firstName": "Gilbert",
+    "lastName": "McNiven",
+    "nickName": "gmcnivenc",
+    "email": "gmcnivenc@goo.ne.jp",
+    "password": "$2a$10$OHBwAPATOaKLSO8AJLesMeMBvbPcKzMvi9O2vLSjDZpyAgA671yiC",
+    "isStreamer": false,
+    "role": "user"
+  },
+  {
+    "firstName": "Mitch",
+    "lastName": "Delia",
+    "nickName": "mdeliad",
+    "email": "mdeliad@tumblr.com",
+    "password": "$2a$10$RldPPlPc6nw9NteRWWeFZODvtRwStBrRnfnHMjp6bj8HGK5JTveZ2",
+    "isStreamer": false,
+    "role": "user"
+  },
+  {
+    "firstName": "Stanton",
+    "lastName": "Scarlett",
+    "nickName": "sscarlette",
+    "email": "sscarlette@ucoz.ru",
+    "password": "$2a$10$ygT52fIK5cgj/PvR.L4ybe3MOr5hVcpEAXOHsO/Ru18QhjsuzRfrS",
+    "isStreamer": false,
+    "role": "user"
+  },
+  {
+    "firstName": "Lewiss",
+    "lastName": "Brundrett",
+    "nickName": "lbrundrettf",
+    "email": "lbrundrettf@theguardian.com",
+    "password": "$2a$10$KdqKiFmSqfbrFBCiPcI0.eUheYcL4VxAY.zxR8vbDXXvounTZ4BPS",
+    "isStreamer": false,
+    "role": "user"
+  },
+  {
+    "firstName": "Goldy",
+    "lastName": "Farnham",
+    "nickName": "gfarnhamg",
+    "email": "gfarnhamg@pinterest.com",
+    "password": "$2a$10$UyYCqW3EsLVT4XsvOnMOPuS/8G7sWh18qEXvvXGNnLMk0oN0FYOtS",
+    "isStreamer": true,
+    "role": "streamer",
+    "mainGame": "VALORANT",
+    "streamSite": "www.twitch.tv/gfarnhamg",
+    "profilePic": "http://dummyimage.com/187x100.png/cc0000/ffffff",
+    "streams": [{}, {}]
+  },
+  {
+    "firstName": "Martie",
+    "lastName": "Ennals",
+    "nickName": "mennalsh",
+    "email": "mennalsh@vimeo.com",
+    "password": "$2a$10$hzPrTtwB.DMLsRfWKHYBdOxSNTb14AhMKnC4j.7hkYK9m9GIBq.KC",
+    "isStreamer": false,
+    "role": "user"
+  },
+  {
+    "firstName": "Johnny",
+    "lastName": "Stiling",
+    "nickName": "jstilingi",
+    "email": "jstilingi@blinklist.com",
+    "password": "NDKCWrmTgBOq",
+    "isStreamer": false,
+    "role": "user"
+  },
+  {
+    "firstName": "Axel",
+    "lastName": "Bertolin",
+    "nickName": "abertolinj",
+    "email": "abertolinj@cafepress.com",
+    "password": "$2a$10$F2/i6gaTQ5x.u4cYQRpckO.mGGuHkZaap84se2ceTL48kamdalHUW",
+    "isStreamer": true,
+    "role": "streamer",
+    "mainGame": "VALORANT",
+    "streamSite": "www.twitch.tv/abertolinj",
+    "profilePic": "http://dummyimage.com/159x100.png/cc0000/ffffff",
+    "streams": [{}, {}, {}, {}, {}]
+  },
+  {
+    "firstName": "Shayna",
+    "lastName": "Litel",
+    "nickName": "slitelk",
+    "email": "slitelk@ox.ac.uk",
+    "password": "$2a$10$Va2n2MdJncoJUugQWuc0MOanMtWo5jJG95kOgPJwJnDsJQ4g9L.UC",
+    "isStreamer": false,
+    "role": "user"
+  },
+  {
+    "firstName": "Zelda",
+    "lastName": "Wateridge",
+    "nickName": "zwateridgel",
+    "email": "zwateridgel@ustream.tv",
+    "password": "$2a$10$I8doiqoZ/XMjC5H.78Kpv.aFrV9uaFivOfcmwL7Y7dCXtyC/HmKlG",
+    "isStreamer": false,
+    "role": "user"
+  },
+  {
+    "firstName": "Silvanus",
+    "lastName": "Munning",
+    "nickName": "smunningm",
+    "email": "smunningm@163.com",
+    "password": "$2a$10$eAODqxXt6JkjQnokPOdODuYjHmhEIW/BOt9bS6EXQmHy22uNP5YQW",
+    "isStreamer": false,
+    "role": "user"
+  },
+  {
+    "firstName": "Carol-jean",
+    "lastName": "D'Hooghe",
+    "nickName": "cdhooghen",
+    "email": "cdhooghen@washingtonpost.com",
+    "password": "$2a$10$T.y5sXTcNw.zlmZqG5Gz2eLykIgZ5jtRYcNTxFX4AtXnqS1YIX1nS",
+    "isStreamer": false,
+    "role": "user"
+  },
+  {
+    "firstName": "Salem",
+    "lastName": "Harvatt",
+    "nickName": "sharvatto",
+    "email": "sharvatto@uiuc.edu",
+    "password": "$2a$10$QLY2SLXr/FHh5zpWD6RHVuPLuoWryut/0EjlBzV0JdF98TRxgKTHS",
+    "isStreamer": false,
+    "role": "user"
+  }
+]
