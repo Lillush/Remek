@@ -1,0 +1,41 @@
+<div
+  class="login-form d-flex justify-content-center align-items-center flex-column"
+>
+  <form
+    class="login mb-4"
+    *ngIf="loginForm"
+    [formGroup]="loginForm"
+    (ngSubmit)="onSubmit()"
+  >
+    <div class="form-group">
+      <div class="mb-3">
+        <div class="h3 text-center mb-3">Please sign in</div>
+        <div class="mb-2">
+          <label for="email" class="form-label">Email</label>
+          <input
+            type="text"
+            class="form-control"
+            id="email"
+            formControlName="email"
+          />
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label for="password" class="form-label">Password</label>
+        <input
+          name="password"
+          type="password"
+          class="form-control"
+          id="password"
+          formControlName="password"
+        />
+      </div>
+    </div>
+    <button type="submit" class="btn btn-primary mt-4">Submit</button>
+  </form>
+  <div>
+    <span>Ha még nincs account-od, itt regisztrálhatsz: </span>
+    <a [routerLink]="['/', 'registration']">Regisztráció</a>
+  </div>
+</div>

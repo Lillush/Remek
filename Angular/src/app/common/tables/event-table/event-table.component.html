@@ -1,0 +1,44 @@
+<div class="table-responsive">
+  <table class="table">
+    <thead>
+      <td>Title</td>
+      <td>Description</td>
+      <td>Game</td>
+      <td>Type</td>
+      <td>Start Date</td>
+      <td style="max-width: 150px">Event Page</td>
+      <td>Actions</td>
+    </thead>
+    <tbody>
+      <tr *ngFor="let event of eventList | filter : phrase">
+        <td>{{ event.title }}</td>
+        <td>{{ event.description }}</td>
+        <td>{{ event.game }}</td>
+        <td>{{ event.type }}</td>
+        <td>{{ event.startDate | date : "longDate" : "+0200" : "hu" }}</td>
+        <td class="text-truncate" style="max-width: 150px">
+          {{ event.eventPage }}
+        </td>
+
+        <td>
+          <div class="btn-group">
+            <button
+              type="button"
+              class="btn btn-warning"
+              [routerLink]="['/eventEditor', event._id]"
+            >
+              Edit
+            </button>
+            <button
+              type="button"
+              class="btn btn-danger"
+              (click)="onDelete(event)"
+            >
+              Delete
+            </button>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

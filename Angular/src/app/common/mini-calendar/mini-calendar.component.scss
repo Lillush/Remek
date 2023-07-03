@@ -1,0 +1,59 @@
+@use "../../../assets/colors";
+
+td,
+th {
+  width: 30px;
+  text-align: center;
+}
+
+.mini-calendar {
+  border-radius: 5px;
+  padding: 10px;
+  font-family: Arial, sans-serif;
+}
+
+.monthOfTheYear {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.daysOfMonth {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-gap: 5px;
+}
+
+.daysOfMonth > span {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 5px;
+  text-align: center;
+}
+
+.weekdays {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.noDay {
+  visibility: hidden;
+}
+
+.gameDay {
+  cursor: pointer;
+}
+
+a {
+  color: colors.$text-other-color !important;
+  text-decoration: none;
+}
+
+a:hover {
+  color: colors.$text-title-hover-color !important;
+  text-decoration: none;
+}

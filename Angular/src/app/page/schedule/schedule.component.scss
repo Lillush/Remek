@@ -1,0 +1,66 @@
+@use "../../../assets/colors";
+
+.week-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(8, 1fr);
+  grid-gap: 10px;
+}
+
+.day-header {
+  background-color: #3c0047;
+  padding: 10px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.day {
+  background-color: #8b00c737;
+  padding: 10px;
+  text-align: center;
+}
+
+.monthOfTheYear {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.weekdays {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.noDay {
+  visibility: hidden;
+}
+
+.gameDay {
+  background-color: #9701b1;
+  cursor: pointer;
+}
+
+.arrow {
+  cursor: pointer;
+}
+
+.stream-list {
+  display: inline-block;
+  margin: 20px;
+}
+
+.stream-title {
+  font-size: large;
+}
+
+a {
+  text-decoration: none;
+  color: colors.$text-title-color;
+}
+
+a:hover {
+  color: colors.$text-title-hover-color;
+  text-decoration: none;
+}

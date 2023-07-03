@@ -1,0 +1,34 @@
+@use "../../../assets/colors";
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: middle;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgb(255, 223, 229);
+}
+
+.btn {
+  background-color: rgb(226, 52, 206);
+  border: none;
+  width: 400px;
+}
+
+.login-form {
+  margin-top: 200px;
+}
+
+.login {
+  width: 400px;
+}
+
+a {
+  color: colors.$text-other-color !important;
+  text-decoration: none;
+}
+
+a:hover {
+  color: colors.$text-title-hover-color !important;
+  text-decoration: none;
+}

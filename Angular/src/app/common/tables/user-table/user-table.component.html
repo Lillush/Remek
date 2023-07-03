@@ -1,0 +1,43 @@
+<table class="table table-responsive">
+  <thead>
+    <td>First Name</td>
+    <td>Last Name</td>
+    <td>Nickname</td>
+    <td>Email</td>
+    <td>Role</td>
+    <td>Main Game</td>
+    <td>Stream URL</td>
+    <td style="max-width: 150px">Profile Picture</td>
+    <td>Streams</td>
+    <td>Actions</td>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of userList | filter : phrase">
+      <td>{{ user.firstName }}</td>
+      <td>{{ user.lastName }}</td>
+      <td>{{ user.nickName }}</td>
+      <td>{{ user.email }}</td>
+      <td>{{ user.role }}</td>
+      <td>{{ user.mainGame }}</td>
+      <td>{{ user.streamSite }}</td>
+      <td class="text-truncate" style="max-width: 150px">
+        {{ user.profilePic }}
+      </td>
+      <td>{{ user.streams }}</td>
+      <td>
+        <div class="btn-group">
+          <button
+            type="button"
+            class="btn btn-warning"
+            [routerLink]="['/userEditor', user._id]"
+          >
+            Edit
+          </button>
+          <button type="button" class="btn btn-danger" (click)="onDelete(user)">
+            Delete
+          </button>
+        </div>
+      </td>
+    </tr>
+  </tbody>
+</table>

@@ -1,0 +1,63 @@
+<div class="table-div table-responsive">
+  <table class="table">
+    <thead>
+      <th>Title</th>
+      <th>Category</th>
+      <th style="max-width: 150px">Short</th>
+      <th style="max-width: 150px">Paragraph</th>
+      <th style="max-width: 150px">Paragraph2</th>
+      <th style="max-width: 150px">Paragraph3</th>
+      <th style="max-width: 150px">Post Image</th>
+      <th style="max-width: 150px">Main Image</th>
+      <th>Lead</th>
+      <th style="max-width: 150px">Post Date</th>
+      <th>Actions</th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let article of articleList | filter : phrase">
+        <td>{{ article.title }}</td>
+        <td>{{ article.category }}</td>
+        <td class="text-truncate" style="max-width: 150px">
+          {{ article.short }}
+        </td>
+        <td class="text-truncate" style="max-width: 150px">
+          {{ article.article1 }}
+        </td>
+        <td class="text-truncate" style="max-width: 150px">
+          {{ article.article2 }}
+        </td>
+        <td class="text-truncate" style="max-width: 150px">
+          {{ article.article3 }}
+        </td>
+        <td class="text-truncate" style="max-width: 150px">
+          {{ article.postImg }}
+        </td>
+        <td class="text-truncate" style="max-width: 150px">
+          {{ article.mainImg }}
+        </td>
+        <td>{{ article.lead }}</td>
+        <td class="text-truncate" style="max-width: 150px">
+          {{ article.postDate | date : "longDate" : "+0200" : "hu" }}
+        </td>
+        <td>
+          <div class="btn-group">
+            <button
+              type="button"
+              class="btn btn-warning"
+              [routerLink]="['/articleEditor', article._id]"
+            >
+              Edit
+            </button>
+            <button
+              type="button"
+              class="btn btn-danger"
+              (click)="onDelete(article)"
+            >
+              Delete
+            </button>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

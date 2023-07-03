@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="row">
+    <div
+      *ngFor="
+        let article of articleList
+          | filter : phrase
+          | paginate : { itemsPerPage: 9, currentPage: p }
+      "
+      class="col-lg-4 col-md-6 col-sm-12"
+    >
+      <app-article-card [article]="article"></app-article-card>
+    </div>
+  </div>
+</div>
+<div class="pagination mt-3">
+  <pagination-controls
+    class="my-pagination"
+    (pageChange)="p = $event"
+    previousLabel="Előző"
+    nextLabel="Következő"
+  ></pagination-controls>
+</div>

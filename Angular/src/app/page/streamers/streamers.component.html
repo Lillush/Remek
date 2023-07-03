@@ -1,0 +1,7 @@
+<div class="container mt-5">
+  <div class="row">
+    <div *ngFor="let streamer of streamerList" class="col-4">
+      <app-streamer-card [user]="streamer"></app-streamer-card>
+    </div>
+  </div>
+</div>

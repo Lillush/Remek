@@ -1,0 +1,5 @@
+@use "../../../assets/colors";
+
+* {
+  color: colors.$text-other-color;
+}

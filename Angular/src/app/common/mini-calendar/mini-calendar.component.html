@@ -1,0 +1,40 @@
+<div class="container d-flex flex-column">
+  <div class="calendar">
+    <div class="monthOfTheYear">
+      <div class="arrow" (click)="skipMonth('-')">&lt;</div>
+      <div>
+        {{ today | date : "YYYY" }}
+        {{ today | date : "MMM" : "+0200" : "hu" }},
+      </div>
+      <div class="arrow" (click)="skipMonth('+')">&gt;</div>
+    </div>
+    <div class="weekdays">
+      <span *ngFor="let day of weekdays">{{ day }}</span>
+    </div>
+    <div class="daysOfMonth">
+      <span
+        *ngFor="let day of daysInMonth"
+        [ngClass]="
+          day.day === 0 ? 'noDay' : day.game !== '' ? 'gameDay' : 'day'
+        "
+        [ngStyle]="
+          day.game === 'PUBG'
+            ? { backgroundColor: 'red' }
+            : day.game === 'CS:GO'
+            ? { backgroundColor: 'green' }
+            : day.game === 'VALORANT'
+            ? { backgroundColor: 'yellow' }
+            : day.game === 'LOL'
+            ? { backgroundColor: 'blue' }
+            : { backgroundColor: 'transparent' }
+        "
+        (click)="onDayClick(day)"
+        >{{ day.day }}</span
+      >
+    </div>
+  </div>
+  <div *ngIf="selectedEvent" class="mt-3">
+    <a href="{{ selectedPage }}" target="_blank"> {{ selectedTitle }} </a>
+    <i class="fa fa-times" (click)="selectedEvent = false"></i>
+  </div>
+</div>

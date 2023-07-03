@@ -1,0 +1,26 @@
+@use "../../../assets/colors";
+
+.aside {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  right: 0;
+  top: 50px;
+  height: 90vh;
+  width: 300px;
+  background-color: colors.$card-bg-color !important;
+}
+
+button {
+  width: 100%;
+}
+
+* {
+  color: colors.$text-other-color !important;
+}
+
+@media only screen and (max-width: 798px) {
+  .aside {
+    display: none;
+  }
+}

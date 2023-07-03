@@ -1,0 +1,74 @@
+<div class="row mt-3" *ngIf="stream">
+  <div class="row mt-3">
+    <div class="col-12">
+      <form #streamRegister="ngForm" (ngSubmit)="onCreate(stream)">
+        <div class="row mb-3">
+          <div class="col">
+            <label class="mb-2" for="title">Stream címe</label>
+            <input
+              name="title"
+              [(ngModel)]="stream.title"
+              type="text"
+              class="form-control"
+              min="2"
+              max="25"
+              required
+            />
+            <div
+              *ngIf="streamRegister.controls['title']?.invalid"
+              class="error-message"
+            >
+              A stream címe legalább 2 karakter hosszú kell legyen!
+            </div>
+          </div>
+        </div>
+
+        <div class="row mb-3">
+          <div class="col">
+            <label class="mb-2" for="game">Játék</label>
+            <select
+              name="game"
+              [(ngModel)]="stream.game"
+              type="text"
+              class="form-control"
+              required
+            >
+              <option value="PUBG">PUBG</option>
+              <option value="CS:GO">CS:GO</option>
+              <option value="VALORANT">VALORANT</option>
+              <option value="LOL">LOL</option>
+              <option value="EFT">EFT</option>
+            </select>
+          </div>
+        </div>
+        <div class="row mb-3">
+          <div class="col">
+            <label class="mb-2" for="startDate">Stream ideje</label>
+            <input
+              name="startDate"
+              [(ngModel)]="stream.startDate"
+              type="date"
+              class="form-control"
+              required
+            />
+          </div>
+          <div class="col">
+            <label class="mb-2" for="streamPage">Stream link</label>
+            <input
+              name="streamPage"
+              [(ngModel)]="stream.streamLink"
+              type="text"
+              class="form-control"
+              required
+            />
+          </div>
+        </div>
+        <div class="row mt-3">
+          <div class="col mt-3">
+            <button class="btn btn-success" type="submit">Mentés</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

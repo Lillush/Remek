@@ -1,0 +1,21 @@
+@use "../../../assets/fonts";
+@use "../../../assets/colors";
+
+.card-title {
+  font-family: fonts.$font_header;
+  font-weight: 600;
+}
+
+img {
+  height: 500px;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: center;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 2rem;
+  color: colors.$text-title-color;
+}

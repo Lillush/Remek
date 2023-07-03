@@ -1,0 +1,26 @@
+@use "../../../assets/colors";
+
+.nav-color {
+  background-color: colors.$card-bg-color !important;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+.fixed-navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  margin-bottom: auto;
+  z-index: 1;
+}
+
+a {
+  color: colors.$text-other-color !important;
+}
+
+a:hover {
+  color: colors.$text-title-hover-color !important;
+}

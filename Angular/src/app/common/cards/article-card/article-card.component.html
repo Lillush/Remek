@@ -1,0 +1,33 @@
+<div class="card">
+  <div class="header">
+    <a [routerLink]="['/', 'article', article._id]"
+      ><img src="{{ article.postImg }}" alt=""
+    /></a>
+    <div
+      class="category__box"
+      [ngStyle]="
+        article.category === 'PUBG'
+          ? { backgroundColor: 'red' }
+          : article.category === 'CS:GO'
+          ? { backgroundColor: 'green' }
+          : article.category === 'Valorant'
+          ? { backgroundColor: 'purple' }
+          : article.category === 'LOL'
+          ? { backgroundColor: 'blue' }
+          : article.category === 'EFT'
+          ? { backgroundColor: 'orange' }
+          : { backgroundColor: 'transparent' }
+      "
+    >
+      <span class="article__category">{{ article.category }}</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <h3 class="card-title">
+      <a [routerLink]="['/', 'article', article._id]">{{ article.title }}</a>
+    </h3>
+    <div class="article__short">
+      {{ article.short }}
+    </div>
+  </div>
+</div>

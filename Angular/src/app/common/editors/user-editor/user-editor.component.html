@@ -1,0 +1,155 @@
+<div class="row mt-3" *ngIf="user">
+  <div class="row mt-3">
+    <div class="col-12">
+      <form #userRegister="ngForm" (ngSubmit)="onUpdate(user)">
+        <div class="row mb-3">
+          <div class="col">
+            <label class="mb-2" for="firstName">Keresztnév</label>
+            <input
+              name="firstName"
+              [(ngModel)]="user.firstName"
+              type="text"
+              class="form-control"
+              pattern="^[A-Ű][A-Űa-Ű .]{3,24}$"
+              min="2"
+              max="25"
+              required
+            />
+            <div
+              *ngIf="userRegister.controls['firstName']?.invalid"
+              class="error-message"
+            >
+              A név legalább 2 karakter hosszú kell legyen!
+            </div>
+          </div>
+          <div class="col">
+            <label class="mb-2" for="lastName">Vezetéknév</label>
+            <input
+              name="lastName"
+              [(ngModel)]="user.lastName"
+              type="text"
+              class="form-control"
+              min="2"
+              max="25"
+              required
+            />
+            <div
+              *ngIf="userRegister.controls['lastName']?.invalid"
+              class="error-message"
+            >
+              A név legalább 2 karakter hosszú kell legyen!
+            </div>
+          </div>
+        </div>
+        <div class="row mb-3">
+          <div class="col">
+            <label class="mb-2" for="nickName">Felhasználónév</label>
+            <input
+              name="nickName"
+              [(ngModel)]="user.nickName"
+              type="text"
+              class="form-control"
+              pattern="^[a-zA-Z0-9]{3,25}$"
+              required
+            />
+            <div
+              *ngIf="userRegister.controls['nickName']?.invalid"
+              class="error-message"
+            >
+              Érvénytelen felhasználónév!
+            </div>
+          </div>
+        </div>
+        <div class="row mb-3">
+          <div class="col">
+            <label class="mb-2" for="email">Email</label>
+            <input
+              name="email"
+              [(ngModel)]="user.email"
+              type="text"
+              class="form-control"
+              pattern="^[\w\.]+@([\w-]+\.)+[\w-]{2,4}$"
+              required
+            />
+            <div
+              *ngIf="userRegister.controls['email']?.invalid"
+              class="error-message"
+            >
+              Érvénytelen E-mail cím!
+            </div>
+          </div>
+        </div>
+        <hr />
+        <div class="row mb-3">
+          <div class="col">
+            <label class="mb-2" for="isStreamer">Streamer?</label>
+            <input
+              name="isStreamer"
+              [(ngModel)]="user.isStreamer"
+              type="text"
+              class="form-control"
+              required
+            />
+          </div>
+          <div class="col">
+            <label class="mb-2" for="role">Role</label>
+            <input
+              name="role"
+              [(ngModel)]="user.role"
+              type="text"
+              class="form-control"
+              required
+            />
+          </div>
+        </div>
+        <hr />
+        <div>
+          <div class="row mb-3">
+            <div class="col">
+              <label class="mb-2" for="mainGame">Fő játék</label>
+              <select
+                name="mainGame"
+                [(ngModel)]="user.mainGame"
+                type="text"
+                class="form-control"
+              >
+                <option value="PUBG">PUBG</option>
+                <option value="CS:GO">CS:GO</option>
+                <option value="VALORANT">VALORANT</option>
+                <option value="LOL">LOL</option>
+                <option value="EFT">EFT</option>
+              </select>
+            </div>
+          </div>
+          <div class="row mb-3">
+            <div class="col">
+              <label class="mb-2" for="streamSite">Oldal</label>
+              <input
+                name="streamSite"
+                [(ngModel)]="user.streamSite"
+                type="text"
+                class="form-control"
+              />
+            </div>
+          </div>
+          <div class="row mb-3">
+            <div class="col">
+              <label class="mb-2" for="profilePic">Profilkép</label>
+              <input
+                name="profilePic"
+                [(ngModel)]="user.profilePic"
+                type="text"
+                class="form-control"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="row mb-3">
+          <div class="col">
+            <button class="btn btn-success" type="submit">Mentés</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

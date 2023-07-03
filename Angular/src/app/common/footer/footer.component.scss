@@ -1,0 +1,28 @@
+@use "../../../assets/colors";
+
+.footer-color {
+  background-color: colors.$card-bg-color !important;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  line-height: 5px; /* Vertically center the text there */
+  background-color: #f5f5f5;
+  margin-top: auto;
+}
+
+a,
+p {
+  color: colors.$text-other-color !important;
+}
+
+a:hover {
+  color: colors.$text-title-hover-color !important;
+}

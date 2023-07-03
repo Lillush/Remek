@@ -1,0 +1,21 @@
+@use "../assets/colors";
+
+.main-container {
+  padding-top: 50px;
+  padding-right: 300px;
+  padding-bottom: 150px;
+  padding-left: 50px;
+}
+
+* {
+  color: colors.$text-other-color !important;
+}
+
+@media only screen and (max-width: 798px) {
+  .main-container {
+    padding: 50px 50px 200px 50px;
+  }
+  app-aside {
+    width: 100vw;
+  }
+}

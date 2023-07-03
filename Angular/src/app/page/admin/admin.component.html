@@ -1,0 +1,36 @@
+<div class="mt-5 mb-3">Üdv Admin!</div>
+<div class="">
+  <div class="btn btn-outline-success" (click)="onNewClick()">
+    Új sor hozzáadása
+  </div>
+</div>
+<div>
+  <div class="buttons mt-5 mb-3">
+    <div class="btn-group" role="group">
+      <button
+        type="button"
+        class="btn btn-outline-warning"
+        (click)="onUsersButtonClick()"
+      >
+        Users
+      </button>
+      <button
+        type="button"
+        class="btn btn-outline-warning"
+        (click)="onEventsButtonClick()"
+      >
+        Events
+      </button>
+      <button
+        type="button"
+        class="btn btn-outline-warning"
+        (click)="onArticlesButtonClick()"
+      >
+        Articles
+      </button>
+    </div>
+  </div>
+</div>
+<app-user-table *ngIf="showUserTable"></app-user-table>
+<app-event-table *ngIf="showEventTable"></app-event-table>
+<app-article-table *ngIf="showArticleTable"></app-article-table>

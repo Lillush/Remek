@@ -1,0 +1,147 @@
+<div class="row mt-3" *ngIf="article">
+  <div class="row mt-3">
+    <div class="col-12">
+      <form #articleRegister="ngForm" (ngSubmit)="onUpdate(article)">
+        <div class="row mb-3">
+          <div class="col">
+            <label class="mb-2" for="title">Cím</label>
+            <input
+              name="title"
+              [(ngModel)]="article.title"
+              type="text"
+              class="form-control"
+              pattern="^[A-Ű][A-Űa-Ű .0-9]{3,24}$"
+              min="2"
+              max="25"
+              required
+            />
+            <div
+              *ngIf="articleRegister.controls['title']?.invalid"
+              class="error-message"
+            >
+              A cikk címe legalább 2 karakter hosszú kell legyen!
+            </div>
+          </div>
+        </div>
+        <div class="row mb-3">
+          <div class="col">
+            <label class="mb-2" for="category">Kategória</label>
+            <select
+              name="category"
+              [(ngModel)]="article.category"
+              type="text"
+              class="form-control"
+              required
+            >
+              <option value="PUBG">PUBG</option>
+              <option value="CS:GO">CS:GO</option>
+              <option value="VALORANT">VALORANT</option>
+              <option value="LOL">LOL</option>
+              <option value="EFT">EFT</option>
+            </select>
+          </div>
+          <div class="col">
+            <label class="mb-2" for="lead">Fő hír?</label>
+            <select
+              name="lead"
+              [(ngModel)]="article.lead"
+              type="text"
+              class="form-control"
+              required
+            >
+              <option value="true">Igen</option>
+              <option value="false">Nem</option>
+            </select>
+          </div>
+        </div>
+        <div class="row mb-3">
+          <div class="col">
+            <div class="col">
+              <label class="mb-2" for="short">Előszó</label>
+              <input
+                name="short"
+                [(ngModel)]="article.short"
+                type="text"
+                class="form-control"
+                required
+              />
+            </div>
+          </div>
+        </div>
+        <div class="row mb-3">
+          <div class="col">
+            <label class="mb-2" for="article1">Bekezdés 1.</label>
+            <input
+              name="article1"
+              [(ngModel)]="article.article1"
+              type="text"
+              class="form-control"
+              required
+            />
+          </div>
+        </div>
+        <div class="row mb-3">
+          <div class="col">
+            <label class="mb-2" for="article2">Bekezdés 2.</label>
+            <input
+              name="article2"
+              [(ngModel)]="article.article2"
+              type="text"
+              class="form-control"
+              required
+            />
+          </div>
+        </div>
+        <div class="row mb-3">
+          <div class="col">
+            <label class="mb-2" for="article1">Bekezdés 3.</label>
+            <input
+              name="article3"
+              [(ngModel)]="article.article3"
+              type="text"
+              class="form-control"
+              required
+            />
+          </div>
+        </div>
+
+        <div class="row mb-3">
+          <div class="col">
+            <label class="mb-2" for="postImg">Kezdő kép</label>
+            <input
+              name="postImg"
+              [(ngModel)]="article.postImg"
+              type="text"
+              class="form-control"
+              required
+            />
+          </div>
+          <div class="col">
+            <label class="mb-2" for="mainImg">Fő kép</label>
+            <input
+              name="mainImg"
+              [(ngModel)]="article.mainImg"
+              type="text"
+              class="form-control"
+              required
+            />
+          </div>
+        </div>
+        <div class="col">
+          <input
+            name="postDate"
+            [(ngModel)]="article.postDate"
+            type="hidden"
+            class="form-control"
+            value="today"
+          />
+        </div>
+        <div class="row mt-3">
+          <div class="col mt-3">
+            <button class="btn btn-success" type="submit">Mentés</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
