@@ -1,0 +1,12 @@
+{
+  "port": 3000,
+  "database": {
+    "user": "user01",
+    "password": "test1234",
+    "host": "remek.8mvs4re.mongodb.net/gm?retryWrites=true&w=majority"
+  },
+  "jwt_secret_key": "2b4998a0f203e5de5c288878f68575dfdb523ff0af376cda4c3e9e3c9d76395310d0b6bbc148e53cd759e65b53ce60c2d81d6fe6574c9378c0e966f1902caa92",
+  "jwt_secret_refresh_key": "secret_key_for_refresh",
+  "access_token_expiry": "24h",
+  "refresh_token_expiry": "24h"
+}
